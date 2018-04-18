@@ -21,6 +21,8 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^2.0.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jsdom": "^11.7.0",
@@ -31,7 +33,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha --require babel-core/register --require test/setup.js",
+    "test": "npm run test:react && npm run test:contracts",
+    "test:contracts": "truffle test test/contracts/* --network unexisting",
+    "test:react": "mocha test/react --require babel-core/register --require test/react/setup.js",
     "eject": "react-scripts eject"
   }
 }
