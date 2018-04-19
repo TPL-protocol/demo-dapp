@@ -1,4 +1,6 @@
 export const PROVIDER = process.env.PROVIDER;
 
-export const JURISDICTION_ADDRESS = '0x20159c3e81cc0c40c9d8e1299db754d672e2b34b';
-export const VALIDATOR_ADDRESS = '0x1ed8d2a88df029413eb41c5c0a1d154b7c210cb6';
+export const JURISDICTION_ADDRESS = '0x3cf38e6ab76deae4a2cd05b9575f7f5a955a99a6';
+export const VALIDATOR_ADDRESS = '0xc32d381e41eb0e9dd469fe93a7ccf11198576b77';
+export const SAMPLE_TOKEN_ADDRESS = '0xda221c2c3c3ef1b6141cd780e75c19deb2a2d060';
+export const SAMPLE_CROWDSALE_ADDRESS = '0x61b3dcd4a1d74c856e5d4331a3c8663cbdfb3888';

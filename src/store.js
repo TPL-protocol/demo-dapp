@@ -7,6 +7,7 @@ import fetching from './reducers/fetching'
 import jurisdiction from './reducers/jurisdiction'
 import validators from './reducers/validators'
 import validations from './reducers/validations'
+import wallet from './reducers/wallet'
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 
 const mainReducer = combineReducers({
@@ -17,6 +18,7 @@ const mainReducer = combineReducers({
   jurisdiction,
   validators,
   validations,
+  wallet,
 });
 
 const Store = createStore(

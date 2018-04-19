@@ -4,8 +4,10 @@ import Store from '../store'
 import Alert from './Alert.react'
 import NetworkActions from "../actions/network";
 import Modal from "./Modal.react"
+import Account from './Account.react';
 import Jurisdiction from './Jurisdiction.react';
 import ValidateMe from './ValidateMe.react';
+import Wallet from './Wallet.react';
 
 class App extends Component {
 
@@ -23,7 +25,9 @@ class App extends Component {
        <div>
          <Alert/>
          <Jurisdiction/>
+         <Account/>
          <ValidateMe/>
+         <Wallet/>
        </div>
       ) :
       <div>
