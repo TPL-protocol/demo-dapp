@@ -29,7 +29,8 @@
     "jsdom": "^11.7.0",
     "mocha": "^5.0.5",
     "redux-test-utils": "^0.2.2",
-    "sinon": "^4.5.0"
+    "sinon": "^4.5.0",
+    "solium": "^1.1.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,6 +38,8 @@
     "test": "npm run test:react && npm run test:contracts",
     "test:contracts": "truffle test test/contracts/* --network unexisting",
     "test:react": "mocha test/react --require babel-core/register --require test/react/setup.js",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:sol": "solium -d contracts",
+    "lint:sol:fix": "solium -d contracts --fix"
   }
 }
