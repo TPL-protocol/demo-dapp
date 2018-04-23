@@ -23,7 +23,7 @@ const WalletActions = {
   },
 
 
-  buy(address) {
+  buyTokens(address) {
     return async function (dispatch) {
       const sampleCrowdsale = await SampleCrowdsale.at(SAMPLE_CROWDSALE_ADDRESS);
       await sampleCrowdsale.sendTransaction({ from: address, value: Network.web3().toWei(0.1, "ether") });

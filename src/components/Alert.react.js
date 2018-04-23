@@ -1,5 +1,4 @@
 import React from 'react'
-import Store from '../store'
 import { connect } from 'react-redux'
 import AlertActions from '../actions/alerts'
 
@@ -14,9 +13,9 @@ class Alert extends React.Component {
       </div>
   }
 
-  _cleanAlert = e => {
+  _cleanAlert(e) {
     e.preventDefault();
-      Store.dispatch(AlertActions.reset());
+    this.props.reset();
   }
 }
 
@@ -24,4 +23,7 @@ function mapStateToProps({ alert }) {
   return { alert }
 }
 
-export default connect(mapStateToProps)(Alert)
+export default connect(
+  mapStateToProps,
+  AlertActions
+)(Alert)

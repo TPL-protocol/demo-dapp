@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import Store from '../store'
 import Alert from './Alert.react'
 import NetworkActions from "../actions/network";
 import Modal from "./Modal.react"
@@ -12,7 +11,7 @@ import Wallet from './Wallet.react';
 class App extends Component {
 
   componentWillMount() {
-    Store.dispatch(NetworkActions.checkConnection())
+    this.props.checkConnection();
   }
 
   render() {
@@ -40,5 +39,7 @@ function mapStateToProps({ fetching, network }) {
     return { fetching, network }
 }
 
-
-export default connect(mapStateToProps)(App);
+export default connect(
+  mapStateToProps,
+  NetworkActions
+)(App);
