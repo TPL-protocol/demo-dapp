@@ -26,6 +26,11 @@
     "chai-bignumber": "^2.0.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
     "jsdom": "^11.7.0",
     "mocha": "^5.0.5",
     "redux-test-utils": "^0.2.2",
@@ -40,6 +45,9 @@
     "test:react": "mocha test/react --require babel-core/register --require test/react/setup.js",
     "eject": "react-scripts eject",
     "lint:sol": "solium -d contracts",
-    "lint:sol:fix": "solium -d contracts --fix"
+    "lint:sol:fix": "solium -d contracts --fix",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix",
+    "lint": "npm run lint:sol && npm run lint:js"
   }
 }

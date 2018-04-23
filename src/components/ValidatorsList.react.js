@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import ValidatorsActions from '../actions/validators'
+import ValidatorsActions from '../actions/validators';
 
 class ValidatorsList extends Component {
   componentWillMount() {
@@ -9,7 +9,7 @@ class ValidatorsList extends Component {
   }
 
   render() {
-    const validators = this.props.validators.list
+    const validators = this.props.validators.list;
     return (
       <div>
         <p>Validators:</p>
@@ -20,7 +20,7 @@ class ValidatorsList extends Component {
           )
         }
       </div>
-    )
+    );
   }
 
   _buildValidatorsList(validators) {
@@ -30,7 +30,7 @@ class ValidatorsList extends Component {
           <b>{validator}</b>
         </li>
       )
-    })
+    });
   }
 }
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import Alert from './Alert.react'
+import { connect } from 'react-redux';
+import Alert from './Alert.react';
 import NetworkActions from "../actions/network";
-import Modal from "./Modal.react"
+import Modal from "./Modal.react";
 import Account from './Account.react';
 import Jurisdiction from './Jurisdiction.react';
 import ValidateMe from './ValidateMe.react';
@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   render() {
-    const network = this.props.network
+    const network = this.props.network;
     const fetching = this.props.fetching;
 
     return (network.connected) ?
@@ -31,12 +31,12 @@ class App extends Component {
       ) :
       <div>
         <Modal dark open={!network.connected} message={'Please access using MIST or Metamask'}/>
-      </div>
+      </div>;
   }
 }
 
 function mapStateToProps({ fetching, network }) {
-    return { fetching, network }
+  return { fetching, network };
 }
 
 export default connect(

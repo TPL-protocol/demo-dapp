@@ -1,6 +1,6 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import AlertActions from '../actions/alerts'
+import React from 'react';
+import { connect } from 'react-redux';
+import AlertActions from '../actions/alerts';
 
 class Alert extends React.Component {
 
@@ -10,7 +10,7 @@ class Alert extends React.Component {
       <div>
         <p>{alert.message} <span onClick={this._cleanAlert}>x</span>
         </p>
-      </div>
+      </div>;
   }
 
   _cleanAlert(e) {
@@ -20,10 +20,10 @@ class Alert extends React.Component {
 }
 
 function mapStateToProps({ alert }) {
-  return { alert }
+  return { alert };
 }
 
 export default connect(
   mapStateToProps,
   AlertActions
-)(Alert)
+)(Alert);

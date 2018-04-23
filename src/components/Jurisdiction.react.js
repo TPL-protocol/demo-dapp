@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import JurisdictionActions from '../actions/jurisdiction'
-import ValidatorsList from './ValidatorsList.react'
+import JurisdictionActions from '../actions/jurisdiction';
+import ValidatorsList from './ValidatorsList.react';
 
 
 const RootDAO = connect(({jurisdiction}) => ({jurisdiction}))((props) => {
-  return <p>RootDAO: { props.jurisdiction.owner } </p>
-})
+  return <p>RootDAO: { props.jurisdiction.owner } </p>;
+});
 
 class Jurisdiction extends Component {
   componentWillMount() {
-    this.props.find()
+    this.props.find();
   }
 
   render() {
@@ -21,7 +21,7 @@ class Jurisdiction extends Component {
         <RootDAO />
         <ValidatorsList />
       </div>
-    )
+    );
   }
 }
 

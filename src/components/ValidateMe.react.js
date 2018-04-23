@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 import ValidationActions from "../actions/validation";
 
@@ -17,7 +17,7 @@ class ValidateMe extends Component {
         <p>Am I validated? { this.props.isValidated ? "Yes" : "No" }</p>
         <button onClick={ () => this.props.validate(this.props.address) }>Validate me</button>
       </div>
-    )
+    );
   }
 
 }
