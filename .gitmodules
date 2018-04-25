@@ -1,4 +1,4 @@
 [submodule "tpl-contracts"]
 	path = tpl-contracts
-	url = http://github.com/elopio/tpl-contracts
-	branch = feature/event-validator-added
+	url = http://github.com/TPL-protocol/tpl-contracts
+	branch = master
